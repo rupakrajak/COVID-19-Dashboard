@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+    font-family: "Varela Round", sans-serif;
+    background-color: #202020;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff08;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b3b3b;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(145, 145, 145);
+}
+
+h4 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+}
+
+select {
+    position: relative;
+    border: none;
+    background-color: #666666;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    outline: none;
+    -webkit-appearance: none;
+    text-overflow: clip;
+    left: 50%;
+    margin-bottom: 20px;
+    transform: translateX(-50%);
+}
+
+#heading {
+    font-size: 4em;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+#heading img {
+    position: relative;
+    height: 4rem;
+    top: 0.6rem;
+}
+
+#global-data-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#global-data-count-wrapper,
+#country-data-count-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#global-data-chart-wrapper,
+#country-data-chart-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#g-confirmed-counter,
+#g-recovered-counter,
+#g-deaths-counter,
+#c-confirmed-counter,
+#c-recovered-counter,
+#c-deaths-counter {
+    margin: 0;
+    text-align: center;
+}
+
+#country-pie-chart {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 600px;
+}
+
+#cases-bar-chart {
+    height: 700px;
+}
+
+#cases-geo-chart {
+    height: 600px;
+    width: 65%;
+    margin-bottom: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.global-data-card,
+.country-data-card {
+    width: 20%;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.confirmed {
+    border-bottom: 10px solid #00b7ff;
+}
+
+.recovered {
+    border-bottom: 10px solid greenyellow;
+}
+
+.deaths {
+    border-bottom: 10px solid red;
+}
+
+.global-data-card.confirmed h1,
+.country-data-card.confirmed h1 {
+    color: rgb(0, 183, 255);
+}
+
+.global-data-card.recovered h1,
+.country-data-card.recovered h1 {
+    color: greenyellow;
+}
+
+.global-data-card.deaths h1,
+.country-data-card.deaths h1 {
+    color: red;
+}
+
+.global-data-card h1,
+.country-data-card h1 {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.global-data-chart,
+.country-data-chart {
+    width: 30%;
+    height: 20em;
+    margin: 10px;
+}
+
+.chart {
+    height: 600px;
+}

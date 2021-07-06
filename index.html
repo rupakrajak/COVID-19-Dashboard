@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style/style.css">
+        <title>COVID-19 Dashboard</title>
+    </head>
+    <body>
+        <h1 id="heading">
+            C<img src="./img/coronavirus.svg" alt="COVID-19" />VID-19 Dashboard
+        </h1>
+        <h1>Global data</h1>
+        <div id="global-data-wrapper">
+            <div id="global-data-count-wrapper">
+                <div class="global-data-card confirmed">
+                    <h1>Confirmed</h1>
+                    <h2 id="g-confirmed-counter"></h2>
+                </div>
+                <div class="global-data-card recovered">
+                    <h1>Recovered</h1>
+                    <h2 id="g-recovered-counter"></h2>
+                </div>
+                <div class="global-data-card deaths">
+                    <h1>Deaths</h1>
+                    <h2 id="g-deaths-counter"></h2>
+                </div>
+            </div>
+            <div id="global-data-chart-wrapper">
+                <div
+                    id="global-confirmed-data-chart"
+                    class="global-data-chart"
+                ></div>
+                <div
+                    id="global-recovered-data-chart"
+                    class="global-data-chart"
+                ></div>
+                <div
+                    id="global-deaths-data-chart"
+                    class="global-data-chart"
+                ></div>
+            </div>
+        </div>
+        <h1>Confirmed cases in different countries on different dates</h1>
+        <select id="date-select" onchange="onDateChange()"></select>
+        <div id="cases-bar-chart"></div>
+        <h4 id="cases-geo-chart-title"></h4>
+        <div id="cases-geo-chart"></div>
+        <h1>Country data</h1>
+        <select id="country-select" onchange="onCountryChange()"></select>
+        <div id="country-data-wrapper">
+            <div id="country-data-count-wrapper">
+                <div class="country-data-card confirmed">
+                    <h1>Confirmed</h1>
+                    <h2 id="c-confirmed-counter"></h2>
+                </div>
+                <div class="country-data-card recovered">
+                    <h1>Recovered</h1>
+                    <h2 id="c-recovered-counter"></h2>
+                </div>
+                <div class="country-data-card deaths">
+                    <h1>Deaths</h1>
+                    <h2 id="c-deaths-counter"></h2>
+                </div>
+            </div>
+            <div id="country-data-chart-wrapper">
+                <div
+                    id="country-confirmed-data-chart"
+                    class="country-data-chart"
+                ></div>
+                <div
+                    id="country-recovered-data-chart"
+                    class="country-data-chart"
+                ></div>
+                <div
+                    id="country-deaths-data-chart"
+                    class="country-data-chart"
+                ></div>
+            </div>
+            <div id="daily-cases-chart" class="chart"></div>
+            <div id="active-cases-chart" class="chart"></div>
+            <div id="country-pie-chart"></div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+        type="text/javascript"
+        src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="module" src="./js/main.js"></script>
+</html>
