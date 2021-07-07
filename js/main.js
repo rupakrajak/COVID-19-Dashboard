@@ -87,7 +87,7 @@ const getDataReady = async (
 
 google.charts.load("current", {
     packages: ["corechart", "line", "geochart"],
-    mapsApiKey: "AIzaSyD8WFNEp2IbLzjlJq_HmTlkmhibfQ-LonA",
+    mapsApiKey: "API_KEY",
 });
 
 function drawLineChart(ele, dataTable, series, xAxis, yAxis, title) {
