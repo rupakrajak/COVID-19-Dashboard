@@ -87,7 +87,7 @@ const getDataReady = async (
 
 google.charts.load("current", {
     packages: ["corechart", "line", "geochart"],
-    mapsApiKey: "API_KEY",
+    mapsApiKey: "YOUR-API-KEY",
 });
 
 function drawLineChart(ele, dataTable, series, xAxis, yAxis, title) {
@@ -407,6 +407,14 @@ const display = async () => {
         "Death cases"
     );
 
+    const countrySelect = document.getElementById("country-select");
+    const dateSelect = document.getElementById("date-select");
+    countrySelect.onchange = () => {
+        onCountryChange();
+    };
+    dateSelect.onchange = () => {
+        onDateChange();
+    };
     onCountryChange();
     onDateChange();
 };
